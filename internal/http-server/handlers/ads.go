@@ -15,6 +15,7 @@ type AdStorage interface {
 	CreateAd(ad *models.Ad) error
 	ListAds(filter storage.AdFilter) ([]models.Ad, error)
 }
+
 type AdHandlers struct {
 	Ads       AdStorage
 	Users     UserStorage

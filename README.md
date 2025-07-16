@@ -16,7 +16,7 @@
    docker build -t vktestmarketplace .
    docker run --rm -p 8080:8080 vktestmarketplace
    ```
-2. **Переменные окружения (.env):**
+2. **Переменные окружения (.env файл уже запушен, для удобства проверки):**
    ```env
    JWT_SECRET=your_secret_key
    DB_PATH=./storage/storage.db
@@ -79,7 +79,7 @@
 ### Лента объявлений
 - **GET /ads**
 - Параметры: `page`, `limit`, `sort_by` (`created_at`/`price`), `sort_order` (`asc`/`desc`), `min_price`, `max_price`
-- Можно передать токен (опционально)
+- Можно передать токен (опционально, при передаче токена, владелец объявления будет получать доп. поле о принадлежности объявления автору)
 - Ответ:
   ```json
   [
